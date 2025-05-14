@@ -1,0 +1,389 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    width: 100%;
+}
+header{
+    background: url("/assets/images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    font-size: 30px;
+}
+#menu{
+    display: none;
+    z-index: 1000;
+}
+.nav-menu{
+    display: flex;
+    gap: 50px;
+}
+.nav-menu a:active{
+    color: red;
+}
+.navbar .logo{
+    font-size: 26px;
+}
+.logo span{
+    font-size: 30px;
+    color: red;
+    font-style: italic;
+}
+.cart-section{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.cart-section button{
+    background-color: transparent;
+    padding: 10px 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cart-count{
+    background-color: red;
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: -30px;
+    margin-left: -40px;
+}
+#nav-mobile{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.842);
+    padding: 20px 50px;
+    transition: 0.8s ease;
+    z-index: 999;
+}
+.nav-mobile-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 2rem;
+}
+#nav-mobile .mobile-cart-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#nav-mobile .mobile-cart-section button{
+    background-color: transparent;
+    padding: 10px 20px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#nav-mobile .mobile-cart-section img{
+    width: 80px; 
+}
+
+.header-content{
+    margin: 20% 5%;
+}
+.header-content p{
+    font-size: 4rem;
+    font-style: italic;
+}
+.header-content-btns{
+    margin:80px auto;
+    display: flex;
+    gap: 40px;
+}
+
+.header-content-btns a{
+    padding: 20px 40px;
+    border: 2px solid red;
+    position: relative;
+    z-index: 1;
+}
+.header-content-btns a span{
+    position:absolute;
+    background-color: red;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease;
+    z-index: -1;
+}
+.header-content a:hover{
+    font-weight: bolder;
+}
+.header-content a:hover span{
+    width: 100%;
+    color: black;
+}
+
+/*collection design*/
+
+.collection{
+    margin: 60px 10%;
+    width: 90%;
+}
+.title h5{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 5%;
+    font-style: italic;
+}
+.collection-cards{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 50px;
+}
+.card{
+    flex-basis: 30%;
+    cursor: pointer;
+    position: relative;
+    z-index: -1;
+}
+.card img{
+    width: 100%;
+    border-radius: 10px;
+}
+.card .content{
+    display: flex;
+    align-items: center;
+    background-color: red;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.card .content img{
+    width: 20px;
+}
+.card img:hover{
+    cursor: pointer;
+}
+/* why section*/
+.why{
+    margin: 60px 10%;
+}
+.why .why-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 100px;
+    margin: 0 10%;
+}
+.why .why-content div{
+    flex-basis: 50%;
+}
+.why .why-content .left-card{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 20px;
+}
+.why .why-content .left p{
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.63);
+    margin-bottom: 5%;
+}
+.why .why-content .left-card p{
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+}
+.why .why-content .left-card .card-contents img{
+    width: 30px;
+}
+.why-content .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.why-content .right img{
+    width: 500px;
+    border-radius: 20px;
+}
+/*About section*/
+.about{
+    margin: 40px 0;
+    background:linear-gradient(rgba(255, 255, 255, 0.884),rgba(0, 0, 0, 0.384)) ,url("/assets//images/armchair-side-table-smart-phone-3d-rendering_1226542-5613.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+}
+.about-content{
+    display: grid;
+    place-items: center;
+    margin: 0 10%;
+    color: rgba(0, 0, 0, 0.877);
+    font-size: 1.5rem;
+}
+/* .about-content p{
+    background: linear-gradient(to right,black,red);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+} */
+.about-content a{
+    margin-top: 4%;
+    padding: 10px 30px;
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    gap: 10px;
+}
+.discount{
+    margin: 40px 10%;
+    background-color: rgb(209, 232, 252);
+    display: grid;
+    place-items: center;
+    padding: 40px 0;
+    border-radius: 5px;
+}
+.discount h2{
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.842);
+}
+.discount h2 span{
+    color: red;
+}
+.discount p{
+    color: rgba(0, 0, 0, 0.788);
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+.discount input{
+    width: 50%;
+    padding: 20px 40px;
+    margin-top: 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+}
+.discount button{
+    margin-top: 2%;
+    background-color: red;
+    color: white;
+    outline: 0;
+    border: 0;
+    padding: 10px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.footer{
+    margin: 20px 10%;
+    width: 90%;
+    display: flex;
+}
+.footer p{
+    flex-basis: 20%;
+}
+.footer div{
+    flex-basis: 20%;
+}
+.footer .links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer .links a{
+    color: rgba(0, 0, 0, 0.596);
+}
+.footer .contact-section button{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2%;
+    background-color: red;
+    color: white;
+    outline: 0;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.footer .contact-section p{
+    margin: 20px;
+}
+
+@media (max-width:700px){
+    .nav-menu,.cart-section{
+        display: none;
+    }
+    .navbar .logo{
+        position: absolute;
+        top: 0;
+        left: 5%;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 2%;
+        cursor: pointer;
+    }
+    .collection-cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .discount{
+        text-align: center;
+    }
+    .discount input{
+        width: 90%;
+    }
+    .why .why-content{
+        display: flex;
+        flex-direction:column-reverse;
+        align-items: center;
+        width: 90%;
+        gap: 20px;
+    }
+}
+@media(max-width:500px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .footer .logo{
+        font-size: 2rem;
+    }
+    
+}
